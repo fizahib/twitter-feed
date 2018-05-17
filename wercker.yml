@@ -23,6 +23,6 @@ push-release:
         registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         working-dir: /pipeline/source
-        ports: 8080
-        env: PORT=8080
+        ports: $PORT
+        env: PORT=$PORT
         cmd: sh target/bin/start
